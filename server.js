@@ -18,6 +18,5 @@ const server = app.listen(PORT, () => {
 //kill the server gracefully
 process.on('unhandledRejection', (err) => {
     console.log(`Error: ${err.message}`)
-    
     server.close(()=> process.exit(1)) // 1 inidcates server failure
 })
